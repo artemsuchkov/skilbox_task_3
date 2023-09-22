@@ -8,8 +8,6 @@ use \classes\rest\post\MethodPost as MethodPost;
 use \classes\rest\put\MethodPut as MethodPut;
 use \classes\rest\delete\MethodDelete as MethodDelete;
 
-$data = Common::get_request_data();
-
 switch (Common::get_method()) {
 
     case "GET":
