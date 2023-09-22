@@ -1,5 +1,5 @@
 <?php
-
+/*
 include("classes/rest/common.php");
 include("classes/rest/get/get.php");
 include("classes/rest/get/users.php");
@@ -9,6 +9,9 @@ include("classes/rest/put/put.php");
 include("classes/rest/put/update.php");
 include("classes/rest/delete/delete.php");
 include("classes/rest/delete/del.php");
+*/
+
+spl_autoload_register();
 
 use \classes\rest\Common as Common;
 use \classes\rest\get\MethodGet as MethodGet;
