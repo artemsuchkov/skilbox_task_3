@@ -15,23 +15,22 @@ class Users {
             ], 400);
         }
 
-        $conn = Connect::getInstance();
-        //print_r($conn->conn);
+        $connect = new Connect;
+        $data['FirstName'] = $connect->safe($data['FirstName']);
+        $data['LastName'] = $connect->safe($data['LastName']);
 
-        $result = mysqli_query($conn->conn," SELECT * FROM `users` WHERE id='1' ");
-        $user = mysqli_fetch_array($result);
-        //print_r($user);
+        $result = $connect->add(" INSERT INTO `users` (`name`,`last_name`) VALUES ('{$data['FirstName']}','{$data['LastName']}')");
 
-        if($user["name"])
+        if($result)
 
             Common::send_response([
                 'status' => 'success',
-                'message' => 'User #1 post'.' '.$user["name"].' '.$data["last_name"].' ' ,
+                'message' => 'User added',
             ], 200);
         
         Common::send_response([
             'status' => 'failed',
-            'message' => 'Error. No user!',
+            'message' => 'Error',
         ], 400);
         
     }
