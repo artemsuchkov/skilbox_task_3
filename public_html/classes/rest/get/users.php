@@ -10,7 +10,7 @@ class Users {
 
         if(is_numeric($endpoint[1])) {
 
-            $result = (new Connect)->findOne(" SELECT * FROM `users` WHERE id = '{$endpoint[1]}' ");
+            $result = (new Connect)->findOne(" SELECT * FROM `users` WHERE id = '{$endpoint[1]}' AND deleted_at IS NULL ");
 
             if(!empty($result))
 

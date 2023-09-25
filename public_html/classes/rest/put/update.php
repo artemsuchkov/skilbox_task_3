@@ -19,7 +19,7 @@ class Update {
 
         $connect = new Connect;
 
-        $user_id = $connect->cnt(" SELECT id count FROM `users` WHERE id  = '{$user_id}' ");
+        $user_id = $connect->cnt(" SELECT id count FROM `users` WHERE id  = '{$user_id}' AND deleted_at IS NULL ");
 
         if(empty($user_id))
 
