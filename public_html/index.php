@@ -14,30 +14,6 @@ use \classes\rest\put\MethodPut as MethodPut;
 use \classes\rest\delete\MethodDelete as MethodDelete;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 switch (Common::get_method()) {
 
     case "GET":
