@@ -28,6 +28,8 @@ services:
       MYSQL_HOST: mysql
       MYSQL_USERNAME: root
       MYSQL_ROOT_PASSWORD: rootpassword
+    volumes:
+      - mysql-data-volume:/var/lib/mysql
   phpmyadmin:
     image: phpmyadmin
     restart: always
@@ -45,3 +47,5 @@ services:
 networks:
   frontend:
   backend:
+volumes:
+  mysql-data-volume:
