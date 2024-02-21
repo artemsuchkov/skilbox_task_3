@@ -2,9 +2,10 @@
 
 $conn = mysqli_init();
 
-$conn->options(MYSQLI_OPT_SSL_VERIFY_SERVER_CERT, true);
-$conn->ssl_set(NULL, NULL, '/home/artmin/.mysql/root.crt', NULL, NULL);
-$conn->real_connect('rc1d-chp76sv7oa9my5qp.mdb.yandexcloud.net', 'user1', 'Artemiy911!', 'db1', 3306, NULL, MYSQLI_CLIENT_SSL);
+//$conn->options(MYSQLI_OPT_SSL_VERIFY_SERVER_CERT, true);
+//$conn->ssl_set(NULL, NULL, '/home/artmin/.mysql/root.crt', NULL, NULL);
+//$conn->real_connect('rc1d-chp76sv7oa9my5qp.mdb.yandexcloud.net', 'user1', 'Artemiy911!', 'db1', 3306, NULL, MYSQLI_CLIENT_SSL);
+$conn->real_connect('rc1d-chp76sv7oa9my5qp.mdb.yandexcloud.net', 'user1', 'Artemiy911!', 'db1', 3306, NULL, 0);
 
 
 $q = $conn->query('SELECT version()');
